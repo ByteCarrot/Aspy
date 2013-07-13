@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Aspy by ByteCarrot</title>
+    <link rel="stylesheet" type="text/css" href="Aspy.ashx?jquery-ui-1.8.19.custom.css" />
+    <link rel="stylesheet" type="text/css" href="Aspy.ashx?style.css" />
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="Aspy.ashx?ie7.css" />
+    <![endif]-->
+    <script id="template-leaf" type="text/x-jsrender">
+        <tr data-id="{{:id}}" data-parent="{{:parentId}}">
+            <td class="name">
+                <span style="padding-left: {{:indent}}px;">{{:name}}</span>
+            </td>
+            <td class="value">
+                <div>
+                    <span>{{:value}}</span>
+                <div>
+            </td>
+            <td class="type">
+                <span>{{:type}}</span>
+            </td>
+        </tr>
+    </script>
+    <script id="template-node" type="text/x-jsrender">
+        <tr data-id="{{:id}}" data-parent="{{:parentId}}" class="clickable">
+            <td class="name">
+                <span style="padding-left: {{:indent}}px; background-position: {{:bgpos}}px 2px;" 
+                      class="node {{:cls}}">{{:name}}</span>
+            </td>
+            <td class="value">
+                <div>
+                    <span>{{:value}}</span>
+                </div>
+            </td>
+            <td class="type">
+                <span>{{:type}}</span>
+            </td>
+        </tr>
+    </script>
+    <script id="template-endoftree" type="text/x-jsrender">
+        <tr data-id="{{:id}}" data-parent="{{:parentId}}" class="endoftree">
+            <td colspan="3">
+                <span style="padding-left: {{:indent}}px;">End of tree</span>
+            </td>
+        </tr>
+    </script>
+</head>
+    <body>
+        <div id="preview-dialog"></div>
+        <div id="header">
+            <img src="Aspy.ashx?logo.png" />
+        </div>
+        <div id="content">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tab-session">ASP.NET Session</a></li>
+                    <li><a href="#tab-cache">ASP.NET Cache</a></li>
+                </ul>
+                <div id="tab-session">
+                    <table>
+                        <thead>
+                            <tr data-id="1">
+                                <th class="name">
+                                    Name
+                                </th>
+                                <th class="value">
+                                    Value
+                                </th>
+                                <th class="type last">
+                                    Type
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="tab-cache">
+                    <table>
+                        <thead>
+                            <tr data-id="1">
+                                <th class="name">
+                                    Name
+                                </th>
+                                <th class="value">
+                                    Value
+                                </th>
+                                <th class="type last">
+                                    Type
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="http://bytecarrot.com" target="_blank">ByteCarrot.com</a> | <a href="http://bytecarrot.com/support/"
+                                                                                    target="_blank">Support</a>
+        </div>
+        <div id="toolbar">
+            <a href="#" id="refresh-button">
+                <img src="Aspy.ashx?refresh.png" alt="Refresh" />
+                <span>Refresh</span></a>
+        </div>
+        <div id="banner">
+            <a href="http://bytecarrot.com/">
+                <img src="http://services.bytecarrot.com/Static/Aspy-Banner.png" alt="Banner" />
+            </a>
+        </div>
+        <div class="ui-widget-shadow ui-corner-all" id="modal">
+        </div>
+        <div id="progress">
+            <div class="ui-widget ui-widget-content ui-corner-all">
+                <img src="Aspy.ashx?loader.gif" alt="Loading..." />
+                Loading...
+            </div>
+        </div>
+        <script type="text/javascript" src="Aspy.ashx?jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="Aspy.ashx?jquery-ui-1.8.19.custom.min.js"></script>
+        <script type="text/javascript" src="Aspy.ashx?colResizable-1.3.min.js"></script>
+        <script type="text/javascript" src="Aspy.ashx?jsrender.js"></script>
+        <script type="text/javascript" src="Aspy.ashx?functions.js"></script>
+        <script type="text/javascript">
+            var uvOptions = {};
+            (function () {
+                var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+                uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/W3FCK9osH1VZGUK4D5l8dA.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+            })();
+        </script>
+    </body>
+</html>

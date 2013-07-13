@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <system.web>
+    <httpHandlers>
+      <add path="Aspy.ashx" verb="GET, POST" type="ByteCarrot.Aspy.AspyHandler, ByteCarrot.Aspy"/>
+    </httpHandlers>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <handlers>
+      <add name="Aspy" path="Aspy.ashx" verb="GET, POST" type="ByteCarrot.Aspy.AspyHandler, ByteCarrot.Aspy"/>
+    </handlers>
+  </system.webServer>
+</configuration>
